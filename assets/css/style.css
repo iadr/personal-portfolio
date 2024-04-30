@@ -65,8 +65,10 @@
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: #ffdb70;
   --vegas-gold: hsl(45, 54%, 58%);
-  --light-gray: hsl(0, 0%, 84%);
-  --light-gray-70: hsla(0, 0%, 84%, 0.7);
+  --light-gray: #d6d6d6;
+  --light-gray-svg: invert(74%) sepia(86%) saturate(0%) hue-rotate(104deg) brightness(94%) contrast(105%);
+  --light-gray-svg-70: invert(74%) sepia(86%) saturate(0%) hue-rotate(104deg) brightness(94%) contrast(105%) opacity(0.7);
+  --light-gray-70: #d6d6d6b3;
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
   /**
@@ -443,8 +445,16 @@ main {
   font-size: 18px;
 }
 
+.social-item .social-link .custom {
+  filter: var(--light-gray-svg-70);
+  font-size: 18px;
+  height: 18px;
+}
+
 
 .social-item .social-link:hover { color: var(--light-gray); }
+
+.social-item .social-link .custom:hover { filter: var(--light-gray-svg); }
 
 
 
