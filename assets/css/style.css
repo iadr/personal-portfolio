@@ -8,6 +8,55 @@
  */
 
 
+/* Estilo para el contenedor del selector */
+.language-select-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Estilo para el select */
+#language-select {
+  -webkit-appearance: none;  /* Para Safari y Chrome */
+  -moz-appearance: none;     /* Para Firefox */
+  appearance: none;          /* Remueve estilos por defecto del select */
+  background-color: var(--onyx); /* Fondo blanco */
+  border: 2px solid #333;    /* Borde oscuro para elegancia */
+  border-radius: 8px;        /* Bordes redondeados */
+  padding: 10px 40px 10px 20px; /* Espaciado interior */
+  font-size: var(--fs-8);           /* Tamaño de fuente */
+  color: var(--white-1);               /* Color de texto */
+  cursor: pointer;           /* Cambia el cursor cuando se pasa por encima */
+  outline: none;             /* Elimina el borde azul en algunos navegadores */
+  transition: all 0.3s ease; /* Transición suave para los cambios de estilo */
+  -moz-padding-right: 50px;  /* Espacio adicional a la derecha para esconder el chevron en Firefox */
+}
+
+/* Pseudo-elemento para el icono de dropdown */
+.language-select-container::after {
+  content: '▼';                /* Icono de dropdown */
+  font-size: var(--fs-8);             /* Tamaño del icono */
+  color: var(--white-1);                 /* Color del icono */
+  position: absolute;          /* Posición absoluta dentro del contenedor */
+  right: 15px;                 /* Distancia del icono al borde derecho */
+  top: 50%;                    /* Centrado vertical */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  pointer-events: none;        /* Ignorar eventos del mouse */
+}
+
+/* Hover y focus para el select */
+#language-select:hover,
+#language-select:focus {
+  background-color: var(--jet); /* Cambia el fondo al pasar por encima o enfocar */
+  border-color: #666;        /* Borde más oscuro en hover o focus */
+}
+
+/* Estilo para el option */
+#language-select option {
+  background-color: var(--onyx); /* Fondo blanco */
+  color: var(--white-1);               /* Color de texto */
+}
+
 
 
 
@@ -87,6 +136,7 @@
   --fs-6: 14px;
   --fs-7: 13px;
   --fs-8: 11px;
+  --fs-9: 9px;
 
   /* font-weight */
   --fw-300: 300;
